@@ -28,16 +28,16 @@ public class PlayerShoot : MonoBehaviour
 
     Vector3 ogPosition;
 
-    public Sprite PlayerEnd;
+    public Sprite[] PlayerEnd;
     public GameObject CrossHair;
     public bool hasended;
     bool ended;
-    public GameObject endScreen;
+    public GameObject endScreen,winscreen;
 
 
     //Audio
 
-    public AudioSource audioSource1, audioSource2;
+    public AudioSource audioSource1, audioSourceEnd,audioSourceWin;
 
     public float fadeDuration = 2.0f;
 
@@ -54,7 +54,7 @@ public class PlayerShoot : MonoBehaviour
         
         // Store the initial volume of both audio sources
         startVolume1 = audioSource1.volume;
-        startVolume2 = audioSource2.volume;
+        startVolume2 = audioSourceEnd.volume;
         Enemy.ended = false;
         ogPosition = transform.position;
         tempSprite = Savlon.sprite;
@@ -75,22 +75,36 @@ public class PlayerShoot : MonoBehaviour
             ended = true;
             if (ended)
             {
-                StartCoroutine(FadeOutAndIn());
+                StartCoroutine(FadeOutAndIn(audioSourceEnd));
                 Enemy.ended = true;
                 ended = false;
                 CrossHair.SetActive(false);
                 clickManager.Instance.canShoot = false;
                 hand.gameObject.SetActive(false);
-                Savlon.sprite = PlayerEnd;
+                Savlon.sprite = PlayerEnd[0];
                 LeanTween.moveLocalY(gameObject, -7f, 5f).setOnComplete(()=>{ endScreen.SetActive(true); });
             }
-            
+
 
             //Destroy(gameObject);
         }
+
+        if (clickManager.Instance.bishnoiCounter == 30)
+        {
+            StartCoroutine(FadeOutAndIn(audioSourceWin));
+            Enemy.ended = true;
+            ended = false;
+            CrossHair.SetActive(false);
+            clickManager.Instance.canShoot = false;
+            hand.gameObject.SetActive(false);
+            Savlon.sprite = PlayerEnd[1];
+            LeanTween.delayedCall(0.25f,() => { winscreen.SetActive(true); });
+            
+        }
+
     }
 
-    private IEnumerator FadeOutAndIn()
+    private IEnumerator FadeOutAndIn(AudioSource audio)
     {
         // Fade out audioSource1
         float elapsedTime = 0;
@@ -106,20 +120,20 @@ public class PlayerShoot : MonoBehaviour
         audioSource1.Stop();
 
         // Play audioSource2 (assuming it's not already playing)
-        if (!audioSource2.isPlaying)
+        if (!audio.isPlaying)
         {
-            audioSource2.Play();
+            audio.Play();
         }
 
         // Fade in audioSource2
         elapsedTime = 0;
         while (elapsedTime < fadeDuration)
         {
-            audioSource2.volume = Mathf.Lerp(0, startVolume2, elapsedTime / fadeDuration);
+            audio.volume = Mathf.Lerp(0, startVolume2, elapsedTime / fadeDuration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        audioSource2.volume = startVolume2;
+        audio.volume = startVolume2;
     }
 
     public void HitEffect()

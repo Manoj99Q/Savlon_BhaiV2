@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     
 
     
-    private bool spawned;
+    public bool spawned;
     private Transform attakcPoint;
     private bool inCombat;
     public bool inCover;
@@ -251,7 +251,6 @@ public class Enemy : MonoBehaviour
         if(!inCover)
         {
             GameObject newObj = Instantiate(bloodshot, transform.position, Quaternion.identity);
-            Debug.Log(newObj.name);
             eshoot.health -= 0.5f;
         }
         
@@ -267,7 +266,6 @@ public class Enemy : MonoBehaviour
             enemySpawnManager.AddAttackPoint(latestPoint);
         }
         AttackPoints = enemySpawnManager.getAttackPoints();
-        Debug.Log(AttackPoints.Count);
         int ranidx = Random.Range(0, AttackPoints.Count);
         changePoint = AttackPoints[ranidx];
         enemySpawnManager.RemoveAttackPoint(ranidx);

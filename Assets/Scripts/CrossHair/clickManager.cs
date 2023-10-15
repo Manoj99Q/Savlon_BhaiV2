@@ -42,6 +42,8 @@ public class clickManager : MonoBehaviour
         BishnoiCounter.text = bishnoiCounter.ToString();
         if(!PlayerShoot.Instance.hasended)
         {
+            CrossHairColour();
+
             timer += Time.deltaTime;
 
             if (canShoot && !isReloading && !PlayerShoot.Instance.defence)
@@ -70,8 +72,6 @@ public class clickManager : MonoBehaviour
                         if (hit.collider.tag == "Enemy")
                         {
                             deer = null;
-                            Color cColor = Color.green;
-                            CrossHair.GetComponent<SpriteRenderer>().color = cColor;
                             audio.Play();
                             enemy = hit.collider.gameObject;
                             //Debug.Log(enemy.tag);
@@ -81,8 +81,6 @@ public class clickManager : MonoBehaviour
                         if (hit.collider.tag == "Deer")
                         {
                             enemy = null;
-                            Color cColor = Color.green;
-                            CrossHair.GetComponent<SpriteRenderer>().color = cColor;
                             audio.Play();
                             deer = hit.collider.gameObject;
                             //Debug.Log(enemy.tag);
@@ -94,8 +92,6 @@ public class clickManager : MonoBehaviour
 
                 if (!foundEnemy)
                 {
-                    Color cColor2 = Color.black;
-                    CrossHair.GetComponent<SpriteRenderer>().color = cColor2;
                     isOnEnemy = false;
                     //Debug.Log("Not on Enemy");
                 }
@@ -167,7 +163,34 @@ public class clickManager : MonoBehaviour
                 StartCoroutine(Reloading());
             }
         }
-        
+
     }
 
+    private void CrossHairColour()
+    {
+        Vector2 mousePosition0 = crossHair.position;
+        RaycastHit2D[] hits0 = Physics2D.RaycastAll(mousePosition0, Vector2.zero, combinedLayerMask);
+        if (hits0.Length > 0)
+        {
+            hits0 = hits0.OrderByDescending(hit => hit.collider.GetComponent<SpriteRenderer>().sortingOrder).ToArray();
+
+            foreach (RaycastHit2D hit in hits0)
+            {
+                if (hit.collider.tag == "Enemy" || hit.collider.tag == "Deer")
+                {
+
+                    deer = null;
+                    Color cColor = Color.green;
+                    CrossHair.GetComponent<SpriteRenderer>().color = cColor;
+                }
+
+            }
+        }
+        else
+        {
+
+            Color cColor2 = Color.black;
+            CrossHair.GetComponent<SpriteRenderer>().color = cColor2;
+        }
+    }
 }

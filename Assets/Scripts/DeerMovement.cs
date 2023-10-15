@@ -8,6 +8,12 @@ public class DeerMovement : MonoBehaviour
 
     private Vector3 initialPosition;
 
+    public GameObject Blood;
+
+    public float shakeAmount = 0.1f;
+    public GameObject Deer;
+
+    public AudioSource audio;
 
     private void Start()
     {
@@ -37,6 +43,40 @@ public class DeerMovement : MonoBehaviour
 
     public void OnShot()
     {
-        Destroy(gameObject);
+        GetComponent<BoxCollider2D>().enabled = false;
+        audio.Play();
+        StartCoroutine(ShakeObject(0.15f));
+        GameObject blood =  Instantiate(Blood, transform.position, Quaternion.identity);
+        Destroy(blood, 0.15f);
+        Destroy(Deer,0.15f);
+        Destroy(gameObject, 1f);
+    }
+
+    private IEnumerator ShakeObject(float duration)
+    {
+        Vector3 originalPosition = Deer.transform.localPosition;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            // Generate a random offset within the specified range.
+            Vector3 randomOffset = Random.insideUnitSphere * shakeAmount;
+            randomOffset.z = 0f; // Ensure the object doesn't move in the z-axis.
+
+            if(gameObject!=null)
+            {
+                // Apply the offset to the object's position.
+                Deer.transform.localPosition = originalPosition + randomOffset;
+            }
+           
+
+            // Increment the elapsed time.
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        // Reset the object's position when the shake is done.
+        Deer.transform.localPosition = originalPosition;
     }
 }

@@ -44,7 +44,7 @@ public class EnemyShoot : MonoBehaviour
 
         if (timer <= 0f )
         {
-            if(enemy.isMoving==false && enemy.inCover == false && !PlayerShoot.Instance.hasended)
+            if(enemy.isMoving==false && enemy.inCover == false && !PlayerShoot.Instance.hasended && !enemy.spawned)
             {
                 
                 ShootPlayer();
