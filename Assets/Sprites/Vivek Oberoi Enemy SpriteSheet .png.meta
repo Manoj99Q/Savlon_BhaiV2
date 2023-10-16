@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: 9f58450fc6da67d4aa5e6355edd18ad9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6968631189307363429
+    second: Vivek Oberoi Enemy SpriteSheet _0
+  - first:
+      213: 2167311199591027000
+    second: Vivek Oberoi Enemy SpriteSheet _1
+  - first:
+      213: -6227535990922916891
+    second: Vivek Oberoi Enemy SpriteSheet _2
+  - first:
+      213: -5636977388243066839
+    second: Vivek Oberoi Enemy SpriteSheet _3
+  - first:
+      213: -6023083407086757933
+    second: Vivek Oberoi Enemy SpriteSheet _4
+  - first:
+      213: -6974806938307333643
+    second: Vivek Oberoi Enemy SpriteSheet _5
+  - first:
+      213: 9058874174656858425
+    second: Vivek Oberoi Enemy SpriteSheet _6
+  - first:
+      213: 817355252584197912
+    second: Vivek Oberoi Enemy SpriteSheet _7
+  - first:
+      213: 6939176890740884291
+    second: Vivek Oberoi Enemy SpriteSheet _8
+  - first:
+      213: 8059144898773444491
+    second: Vivek Oberoi Enemy SpriteSheet _9
+  - first:
+      213: -4835687113735927408
+    second: Vivek Oberoi Enemy SpriteSheet _10
+  - first:
+      213: 3152631150061670779
+    second: Vivek Oberoi Enemy SpriteSheet _11
+  - first:
+      213: -3418364016542613644
+    second: Vivek Oberoi Enemy SpriteSheet _12
+  - first:
+      213: 6681117963104534576
+    second: Vivek Oberoi Enemy SpriteSheet _13
+  - first:
+      213: 3113819176365926996
+    second: Vivek Oberoi Enemy SpriteSheet _14
+  - first:
+      213: -1450289885689805545
+    second: Vivek Oberoi Enemy SpriteSheet _15
+  - first:
+      213: -2260878078182400448
+    second: Vivek Oberoi Enemy SpriteSheet _16
+  - first:
+      213: 8229745834426713884
+    second: Vivek Oberoi Enemy SpriteSheet _17
+  - first:
+      213: 3691538998441047855
+    second: Vivek Oberoi Enemy SpriteSheet _18
+  - first:
+      213: -8865124763909693617
+    second: Vivek Oberoi Enemy SpriteSheet _19
+  - first:
+      213: -5380152246043862152
+    second: Vivek Oberoi Enemy SpriteSheet _20
+  - first:
+      213: -3323072245470514220
+    second: Vivek Oberoi Enemy SpriteSheet _21
+  - first:
+      213: 7914431905411284676
+    second: Vivek Oberoi Enemy SpriteSheet _22
+  - first:
+      213: 5854863490496279735
+    second: Vivek Oberoi Enemy SpriteSheet _23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _0
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1951
+        width: 319
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5609f51352d85b060800000000000000
+      internalID: 6968631189307363429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _1
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1914
+        width: 234
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83159599d06d31e10800000000000000
+      internalID: 2167311199591027000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _2
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 1937
+        width: 234
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb441bd2095399a0800000000000000
+      internalID: -6227535990922916891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _3
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1879
+        width: 193
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920ecde6eee65c1b0800000000000000
+      internalID: -5636977388243066839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _4
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1906
+        width: 219
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d75b0c8d85b96ca0800000000000000
+      internalID: -6023083407086757933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _5
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 1951
+        width: 320
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1f2413b02843f90800000000000000
+      internalID: -6974806938307333643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _6
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1357
+        width: 244
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939c16dd01697bd70800000000000000
+      internalID: 9058874174656858425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _7
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1357
+        width: 243
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fa49d8544d75b00800000000000000
+      internalID: 817355252584197912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _8
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 1357
+        width: 245
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343c536ed98ec4060800000000000000
+      internalID: 6939176890740884291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _9
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1357
+        width: 244
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87eac41695d7df60800000000000000
+      internalID: 8059144898773444491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _10
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1357
+        width: 243
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09906dcc03034ecb0800000000000000
+      internalID: -4835687113735927408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _11
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1357
+        width: 244
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71d14fd35560cb20800000000000000
+      internalID: 3152631150061670779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _12
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 790
+        width: 244
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ffff8c9088f80d0800000000000000
+      internalID: -3418364016542613644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _13
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 790
+        width: 243
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030c35da36918bc50800000000000000
+      internalID: 6681117963104534576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _14
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 790
+        width: 245
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a271e0b02863b20800000000000000
+      internalID: 3113819176365926996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _15
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 790
+        width: 244
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7150e1e68098fdbe0800000000000000
+      internalID: -1450289885689805545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _16
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 790
+        width: 243
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e5875dd5fbf90e0800000000000000
+      internalID: -2260878078182400448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _17
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 790
+        width: 244
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1741ccbb3ee53270800000000000000
+      internalID: 8229745834426713884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _18
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 189
+        width: 198
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f277494192bfa3330800000000000000
+      internalID: 3691538998441047855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _19
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 189
+        width: 199
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fd4a52fffb8f480800000000000000
+      internalID: -8865124763909693617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _20
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 189
+        width: 199
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b1909990cd555b0800000000000000
+      internalID: -5380152246043862152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _21
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 189
+        width: 199
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d335cd266312e1d0800000000000000
+      internalID: -3323072245470514220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _22
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 189
+        width: 199
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cebe01b2e5b5dd60800000000000000
+      internalID: 7914431905411284676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vivek Oberoi Enemy SpriteSheet _23
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 189
+        width: 199
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b43f6ff257a04150800000000000000
+      internalID: 5854863490496279735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
