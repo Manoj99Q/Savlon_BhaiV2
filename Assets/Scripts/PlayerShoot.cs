@@ -91,17 +91,27 @@ public class PlayerShoot : MonoBehaviour
 
         if (clickManager.Instance.bishnoiCounter == 30)
         {
-            StartCoroutine(FadeOutAndIn(audioSourceWin));
-            Enemy.ended = true;
-            ended = false;
-            CrossHair.SetActive(false);
-            clickManager.Instance.canShoot = false;
-            hand.gameObject.SetActive(false);
-            Savlon.sprite = PlayerEnd[1];
-            LeanTween.delayedCall(0.25f,() => { winscreen.SetActive(true); });
+            if(!Enemy.ended)
+            {
+                WinScreen();
+            }
+           
             
+
         }
 
+    }
+
+    private void WinScreen()
+    {
+        StartCoroutine(FadeOutAndIn(audioSourceWin));
+        Enemy.ended = true;
+        ended = false;
+        CrossHair.SetActive(false);
+        clickManager.Instance.canShoot = false;
+        hand.gameObject.SetActive(false);
+        Savlon.sprite = PlayerEnd[1];
+        LeanTween.delayedCall(2f, () => { winscreen.SetActive(true); });
     }
 
     private IEnumerator FadeOutAndIn(AudioSource audio)

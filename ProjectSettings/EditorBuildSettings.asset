@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/EnemySpawning.unity
+    path: Assets/Scenes/Bishnoi Level.unity
     guid: 33d42afefdb109f4b9e79ae2b588b3dd
   m_configObjects: {}

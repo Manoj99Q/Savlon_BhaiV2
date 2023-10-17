@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6747789929134205286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7052324845467008830}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &516741280105876332
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3695387dc88a51040b67a615865ef080, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd85512b8e5a46642ba021fa6e7304d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4852688043371593732}
   - component: {fileID: 8436398679802858610}
   m_Layer: 0
-  m_Name: Deer (1)
+  m_Name: Arijit
   m_TagString: Deer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 7052324845467008828}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 12.2, y: 1.59, z: 0}
-  m_LocalScale: {x: 0.76135, y: 0.76135, z: 0.76135}
+  m_LocalScale: {x: 0.620888, y: 0.620888, z: 0.620888}
   m_Children:
   - {fileID: 1222740491035592140}
   m_Father: {fileID: 0}
@@ -186,7 +186,7 @@ MonoBehaviour:
   shakeAmount: 0.1
   Deer: {fileID: 6747789929134205286}
   audio: {fileID: 8436398679802858610}
-  destroyTime: 1
+  destroyTime: 1.25
   destroyTime2: 0.15
 --- !u!61 &4852688043371593732
 BoxCollider2D:
@@ -224,7 +224,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 41eb0fa32e4a0474c9a3c6f7d0f1eb7c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1abc670440f617e48abbdbc2184cf27e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

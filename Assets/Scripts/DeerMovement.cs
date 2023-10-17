@@ -15,6 +15,9 @@ public class DeerMovement : MonoBehaviour
 
     public AudioSource audio;
 
+    [SerializeField] float destroyTime;
+    [SerializeField] float destroyTime2;
+
     private void Start()
     {
         initialPosition = transform.position;
@@ -47,9 +50,9 @@ public class DeerMovement : MonoBehaviour
         audio.Play();
         StartCoroutine(ShakeObject(0.15f));
         GameObject blood =  Instantiate(Blood, transform.position, Quaternion.identity);
-        Destroy(blood, 0.15f);
-        Destroy(Deer,0.15f);
-        Destroy(gameObject, 1f);
+        Destroy(blood, destroyTime);
+        Destroy(Deer, destroyTime2);
+        Destroy(gameObject, destroyTime);
     }
 
     private IEnumerator ShakeObject(float duration)

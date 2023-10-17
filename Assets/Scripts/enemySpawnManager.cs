@@ -9,7 +9,7 @@ public class enemySpawnManager : MonoBehaviour
     [SerializeField] private GameObject Enemy,Deer;
     [SerializeField] private Transform Dspot1, Dspot2;
 
-    [SerializeField] private int Maxenemies;
+    [SerializeField] private int MaxCurrenemies;
     [SerializeField] private float SpawnInterval;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private List<Transform> AttackPoints;
@@ -65,14 +65,15 @@ public class enemySpawnManager : MonoBehaviour
                     Vector3 deerSpawnPosition = spawnPoint.position;
 
                     GameObject newDeer = Instantiate(Deer, deerSpawnPosition, Quaternion.identity);
+                    Vector3 scale = newDeer.transform.localScale;
                     newDeer.SetActive(true);
                     if(spawnPoint.position.x>0)
                     {
-                        newDeer.transform.localScale = new Vector3(-1, 1, 1);
+                        newDeer.transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
                     }
                     else
                     {
-                        newDeer.transform.localScale = new Vector3(1, 1, 1);
+                        newDeer.transform.localScale = new Vector3(scale.x, scale.y, scale.z);
                     }
 
                     // Calculate the direction from the spawn point to the opposite spot.
@@ -90,7 +91,7 @@ public class enemySpawnManager : MonoBehaviour
             {
                 
 
-                if (currEnemies.Count < Maxenemies)
+                if (currEnemies.Count < MaxCurrenemies)
                 {
 
 
