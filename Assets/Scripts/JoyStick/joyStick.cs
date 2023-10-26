@@ -35,7 +35,7 @@ public class joyStick : MonoBehaviour
                     break;
 
                 case TouchPhase.Moved:
-                    rb.MovePosition(new Vector2(touchPos.x - deltaX, touchPos.y - deltaY)*moveSpeed);
+                    rb.MovePosition(new Vector2(touchPos.x - deltaX, touchPos.y - deltaY));
                     break;
 
                 case TouchPhase.Ended:

@@ -22,8 +22,8 @@ public class clickManager : MonoBehaviour
     public GameObject gun;
 
     bool isReloading;
-    [SerializeField] TextMeshProUGUI BishnoiCounter;
-    public int bishnoiCounter = 0;
+    [SerializeField] TextMeshProUGUI BishnoiCounter,DeerCounter;
+    public int bishnoiCounter = 0,deerCounter =0;
 
     public Transform crossHair;
     private void Awake()
@@ -40,7 +40,8 @@ public class clickManager : MonoBehaviour
     void Update()
     {
         BishnoiCounter.text = bishnoiCounter.ToString();
-        if(!PlayerShoot.Instance.hasended)
+        DeerCounter.text = deerCounter.ToString();
+        if (!PlayerShoot.Instance.hasended)
         {
             CrossHairColour();
 
@@ -116,6 +117,7 @@ public class clickManager : MonoBehaviour
                         CrosshairRotation.Instance.ShakeX();
                         StartCoroutine(MuzzleFlash());
                         deer.transform.GetComponent<DeerMovement>().OnShot();
+                        deerCounter++;
                         //reload--;
                         canShoot = false; // Disable shooting
                         timer = 0f;
