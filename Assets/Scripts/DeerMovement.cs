@@ -79,7 +79,11 @@ public class DeerMovement : MonoBehaviour
             yield return null;
         }
 
-        // Reset the object's position when the shake is done.
-        Deer.transform.localPosition = originalPosition;
+        if(gameObject != null)
+        {
+            // Reset the object's position when the shake is done.
+            Deer.transform.localPosition = originalPosition;
+        }
+        
     }
 }

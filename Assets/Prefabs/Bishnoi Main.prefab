@@ -502,6 +502,7 @@ MonoBehaviour:
   coverChangeTime: 8
   bloodshot: {fileID: 100000, guid: bc98890f6028f444eaa7789bde5e2eeb, type: 3}
   AttackPoints: []
+  spawned: 0
   inCover: 0
   anim: {fileID: 7031518379874430669}
   isMoving: 0

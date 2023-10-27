@@ -35,8 +35,11 @@ public class PunchController : MonoBehaviour
     public GameObject finishHer;
 
     public GameObject EndScreen;
+
+    bool canPunch;
     private void Start()
     {
+        canPunch = true;
         audio = GetComponent<AudioSource>();
         health = 1;
         originalRotation = AishFace.transform.rotation;
@@ -51,24 +54,31 @@ public class PunchController : MonoBehaviour
             
         }
 
-        else if(health > 0.5 && health < 0.75f)
+        if(health > 0.6 && health < 0.95f)
         {
             
             AishFace.GetComponent<Image>().sprite = Faces[0];
         }
-        else if (health > 0.25f && health < 0.5f)
+        if (health > 0.35f && health < 0.6f)
         {
             RagePanel.Instance.FadeIn();
             ContinuousShake.shakeAmount = 0.5f;
-            if(finishHer!=null)
+            
+            
+            AishFace.GetComponent<Image>().sprite = Faces[1];
+        }
+        if (health > 0.35f && health < 0.45f)
+        {
+
+
+            if (finishHer != null)
             {
                 finishHer.SetActive(true);
                 Destroy(finishHer, 1.7f);
             }
-            
-            AishFace.GetComponent<Image>().sprite = Faces[1];
         }
-        else if (health > 0f && health < 0.25f)
+
+        if (health > 0f && health < 0.35f)
         {
             
             
@@ -81,17 +91,22 @@ public class PunchController : MonoBehaviour
             EndScreen.SetActive(true);
             FadeAudio.Instance.Fade();
             ContinuousShake.shakeAmount = 0f;
+            canPunch = false;
             
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if(canPunch)
         {
-            RightPunch();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                RightPunch();
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                LeftPunch();
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            LeftPunch();
-        }
+        
     }
 
     public void LeftPunch()
@@ -120,6 +135,7 @@ public class PunchController : MonoBehaviour
 
     private IEnumerator ShakeHeadAndReset()
     {
+        InputTut.Instance.deactivate = true;
         audio.Play();
         int randomIndex = UnityEngine.Random.Range(0, HitSpots.Length); // Generate a random index within the array's bounds
         Transform hitPos = HitSpots[randomIndex]; // Select a random Transform from HitSpots

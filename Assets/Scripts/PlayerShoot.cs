@@ -44,6 +44,8 @@ public class PlayerShoot : MonoBehaviour
     private float startVolume1;
     private float startVolume2;
 
+    public int levelID;
+
     private void Awake()
     {
         Instance = this;
@@ -60,6 +62,7 @@ public class PlayerShoot : MonoBehaviour
         tempSprite = Savlon.sprite;
         localScale = hbar.localScale;
         health = 1;
+        
     }
 
     void Update()
@@ -93,6 +96,9 @@ public class PlayerShoot : MonoBehaviour
         {
             if(!Enemy.ended)
             {
+                PlayerPrefs.SetInt("LevelPassed", levelID);
+                int levelPassed = PlayerPrefs.GetInt("LevelPassed", levelID);
+                Debug.Log(levelPassed);
                 WinScreen();
             }
            
