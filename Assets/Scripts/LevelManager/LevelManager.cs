@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
 		switch (levelPassed)
 		{
 			case 1:
+
 				level02Button.interactable = true;
 				level02Button.transform.GetChild(1).gameObject.SetActive(false);
 				break;

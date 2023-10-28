@@ -46,6 +46,8 @@ public class PlayerShoot : MonoBehaviour
 
     public int levelID;
 
+    public GameObject Tutorial, InputGameObj;
+
     private void Awake()
     {
         Instance = this;
@@ -53,8 +55,9 @@ public class PlayerShoot : MonoBehaviour
 
     void Start()
     {
-        
-        // Store the initial volume of both audio sources
+        InputGameObj.GetComponent<joyStick>().enabled = false;
+        InputGameObj.GetComponent<CrossHairMovement>().enabled = false;
+        Tutorial.SetActive(false);
         startVolume1 = audioSource1.volume;
         startVolume2 = audioSourceEnd.volume;
         Enemy.ended = false;
@@ -62,7 +65,18 @@ public class PlayerShoot : MonoBehaviour
         tempSprite = Savlon.sprite;
         localScale = hbar.localScale;
         health = 1;
-        
+        if(MobileCheck._isMobile)
+        {
+            Tutorial.SetActive(true);
+            InputGameObj.GetComponent<joyStick>().enabled = true;
+            
+
+        }
+        else
+        {
+            InputGameObj.GetComponent<CrossHairMovement>().enabled = true;
+
+        }
     }
 
     void Update()
@@ -96,9 +110,14 @@ public class PlayerShoot : MonoBehaviour
         {
             if(!Enemy.ended)
             {
-                PlayerPrefs.SetInt("LevelPassed", levelID);
+                
+                
                 int levelPassed = PlayerPrefs.GetInt("LevelPassed", levelID);
-                Debug.Log(levelPassed);
+                if(levelPassed!=2)
+                {
+                    PlayerPrefs.SetInt("LevelPassed", levelID);
+                }
+                
                 WinScreen();
             }
            
