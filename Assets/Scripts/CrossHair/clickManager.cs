@@ -78,6 +78,7 @@ public class clickManager : MonoBehaviour
                             //Debug.Log(enemy.tag);
                             isOnEnemy = true; // On an enemy
                             foundEnemy = true; // Set to true when an enemy is found
+
                         }
                         if (hit.collider.tag == "Deer")
                         {
@@ -181,8 +182,8 @@ public class clickManager : MonoBehaviour
                 if (hit.collider.tag == "Enemy" || hit.collider.tag == "Deer")
                 {
 
-                    deer = null;
-                    Color cColor = Color.green;
+                    
+                    Color cColor = Color.red;
                     CrossHair.GetComponent<SpriteRenderer>().color = cColor;
                 }
 

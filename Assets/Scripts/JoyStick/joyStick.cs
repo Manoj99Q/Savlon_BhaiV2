@@ -19,7 +19,8 @@ public class joyStick : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            InputTut.Instance.deactivate = true;
+            
+            
             Touch touch = Input.GetTouch(0);
 
             Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);

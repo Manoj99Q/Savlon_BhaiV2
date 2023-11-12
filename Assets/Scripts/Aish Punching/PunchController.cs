@@ -37,8 +37,24 @@ public class PunchController : MonoBehaviour
     public GameObject EndScreen;
 
     bool canPunch;
+
+    public Image LeftP, RightP;
+
+    public Sprite[] Keys;
     private void Start()
     {
+        if (MobileCheck._isMobile)
+        {
+
+            InputTut.Instance.deactivate = true;
+
+        }
+        else
+        {
+            LeftP.sprite = Keys[0];
+            RightP.sprite = Keys[1];
+
+        }
         canPunch = true;
         audio = GetComponent<AudioSource>();
         health = 1;
@@ -97,11 +113,11 @@ public class PunchController : MonoBehaviour
 
         if(canPunch)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 RightPunch();
             }
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 LeftPunch();
             }

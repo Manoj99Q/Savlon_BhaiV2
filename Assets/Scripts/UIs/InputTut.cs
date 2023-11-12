@@ -13,18 +13,27 @@ public class InputTut : MonoBehaviour
     {
         Instance = this;
     }
-    void Deactivate()
-    {
-        LeanTween.delayedCall(time, () => { gameObject.SetActive(false); });
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
         if(deactivate)
         {
             Deactivate();
         }
+    }
+    public void Deactivate()
+    {
+        LeanTween.delayedCall(time, () => { gameObject.SetActive(false); });
+        PlayerPrefs.SetInt("TutComplete",1);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //if(deactivate)
+        //{
+        //    Deactivate();
+        //}
     }
 
     

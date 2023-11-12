@@ -58,9 +58,14 @@ public class EnemyShoot : MonoBehaviour
 
         if (health == 0)
         {
+            if (InputTut.Instance != null)
+            {
+                InputTut.Instance.Deactivate();
+            }
             health = 0.01f;
             enemySpawnManager.Instance.KilledEnemy(gameObject);
             clickManager.Instance.bishnoiCounter++;
+
             Destroy(gameObject, 0.15f);
         }
     }

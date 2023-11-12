@@ -336,7 +336,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &143046728 stripped
 RectTransform:
@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 176915642}
   - component: {fileID: 176915641}
   - component: {fileID: 176915640}
+  - component: {fileID: 176915643}
   m_Layer: 5
   m_Name: TG
   m_TagString: Untagged
@@ -435,7 +436,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 176915641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 176915643}
+        m_TargetAssemblyTypeName: OpenUrl, Assembly-CSharp
+        m_MethodName: OpenURL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &176915641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +487,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176915638}
   m_CullTransparentMesh: 1
+--- !u!114 &176915643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176915638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b054450ad9d14c46bcc14dbabf653d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  urlToOpen: https://tandoorigames.com/
 --- !u!1 &209370243
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,9 +531,8 @@ RectTransform:
   m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.009259259}
   m_Children:
   - {fileID: 96979741}
-  - {fileID: 188274099902458507}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -806,10 +831,10 @@ RectTransform:
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 427.13, y: 355.78}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.001953125}
+  m_SizeDelta: {x: 427.13, y: -510.44}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &341243180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,6 +981,11 @@ MonoBehaviour:
   Hit: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
   finishHer: {fileID: 633103337}
   EndScreen: {fileID: 377724217}
+  LeftP: {fileID: 1782693270}
+  RightP: {fileID: 188274100081926343}
+  Keys:
+  - {fileID: 21300000, guid: 5aba8792c94c23b4e9b39b1d421cfcfb, type: 3}
+  - {fileID: 21300000, guid: 7b63641f23f6e2748bfed77e531054cc, type: 3}
 --- !u!4 &369524644
 Transform:
   m_ObjectHideFlags: 0
@@ -968,7 +998,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &369524645
 AudioSource:
@@ -1160,7 +1190,7 @@ RectTransform:
   - {fileID: 2105330315}
   - {fileID: 789472772}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1986,10 +2016,10 @@ RectTransform:
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 427.13, y: 355.78}
-  m_Pivot: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.001953125}
+  m_SizeDelta: {x: 427.13, y: -510.44}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &899794572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2417,7 +2447,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2509,6 +2539,7 @@ GameObject:
   - component: {fileID: 1313257044}
   - component: {fileID: 1313257043}
   - component: {fileID: 1313257042}
+  - component: {fileID: 1313257045}
   m_Layer: 5
   m_Name: Reddit
   m_TagString: Untagged
@@ -2578,7 +2609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1313257043}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1313257045}
+        m_TargetAssemblyTypeName: OpenUrl, Assembly-CSharp
+        m_MethodName: OpenURL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1313257043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2617,6 +2660,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313257040}
   m_CullTransparentMesh: 1
+--- !u!114 &1313257045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313257040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b054450ad9d14c46bcc14dbabf653d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  urlToOpen: https://www.reddit.com/r/TandooriGames/s/uDEDpZVpMa
 --- !u!1 &1367340593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,6 +2819,7 @@ GameObject:
   - component: {fileID: 1414382091}
   - component: {fileID: 1414382090}
   - component: {fileID: 1414382089}
+  - component: {fileID: 1414382092}
   m_Layer: 5
   m_Name: Discord
   m_TagString: Untagged
@@ -2832,7 +2889,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1414382090}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414382092}
+        m_TargetAssemblyTypeName: OpenUrl, Assembly-CSharp
+        m_MethodName: OpenURL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1414382090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2871,6 +2940,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414382087}
   m_CullTransparentMesh: 1
+--- !u!114 &1414382092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414382087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b054450ad9d14c46bcc14dbabf653d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  urlToOpen: https://discord.gg/GkDvjJ6Q
 --- !u!1 &1417798078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,7 +3249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530448831
 GameObject:
@@ -3678,7 +3760,7 @@ Transform:
   - {fileID: 959122419}
   - {fileID: 50951063}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642409077
 GameObject:
@@ -3958,7 +4040,7 @@ RectTransform:
   m_Children:
   - {fileID: 2104043390}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4333,7 +4415,7 @@ RectTransform:
   - {fileID: 1566100050}
   - {fileID: 255283}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4723,6 +4805,7 @@ GameObject:
   - component: {fileID: 2135144006}
   - component: {fileID: 2135144005}
   - component: {fileID: 2135144004}
+  - component: {fileID: 2135144007}
   m_Layer: 5
   m_Name: Patreon
   m_TagString: Untagged
@@ -4746,7 +4829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
+  m_AnchoredPosition: {x: 0, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135144004
@@ -4792,7 +4875,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2135144005}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2135144007}
+        m_TargetAssemblyTypeName: OpenUrl, Assembly-CSharp
+        m_MethodName: OpenURL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2135144005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4831,6 +4926,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135144002}
   m_CullTransparentMesh: 1
+--- !u!114 &2135144007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135144002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b054450ad9d14c46bcc14dbabf653d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  urlToOpen: https://patreon.com/TandooriGames?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_creator&utm_content=join_link
 --- !u!1 &2143019624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,12 +5139,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188274099902458503}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9720}
-  m_LocalScale: {x: 11.358905, y: 11.358905, z: 11.358905}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.10517505, y: 0.10517505, z: 0.10517505}
   m_Children:
   - {fileID: 1116912130}
   - {fileID: 188274099272511959}
-  m_Father: {fileID: 209370244}
+  m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5056,8 +5164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ce91703bd102f49b70ecc6edf2d838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deactivate: 0
-  time: 3
+  deactivate: 1
+  time: 5
 --- !u!1 &188274100081926340
 GameObject:
   m_ObjectHideFlags: 0

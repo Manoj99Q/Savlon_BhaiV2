@@ -48,6 +48,8 @@ public class PlayerShoot : MonoBehaviour
 
     public GameObject Tutorial, InputGameObj;
 
+    int tutComplete;
+
     private void Awake()
     {
         Instance = this;
@@ -55,6 +57,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Start()
     {
+        tutComplete = PlayerPrefs.GetInt("TutComplete");
         InputGameObj.GetComponent<joyStick>().enabled = false;
         InputGameObj.GetComponent<CrossHairMovement>().enabled = false;
         Tutorial.SetActive(false);
@@ -65,11 +68,15 @@ public class PlayerShoot : MonoBehaviour
         tempSprite = Savlon.sprite;
         localScale = hbar.localScale;
         health = 1;
-        if(MobileCheck._isMobile)
+        
+        if (MobileCheck._isMobile)
         {
-            Tutorial.SetActive(true);
+            if (tutComplete == 0)
+            {
+                Tutorial.SetActive(true);
+            }
             InputGameObj.GetComponent<joyStick>().enabled = true;
-            
+
 
         }
         else
@@ -108,17 +115,17 @@ public class PlayerShoot : MonoBehaviour
 
         if (clickManager.Instance.bishnoiCounter == 30)
         {
-            if(!Enemy.ended)
+            if (!Enemy.ended)
             {
-                
-                
+
+
                 int levelPassed = PlayerPrefs.GetInt("LevelPassed", levelID);
-                if(levelPassed!=2)
+                if (levelPassed != 2)
                 {
                     PlayerPrefs.SetInt("LevelPassed", levelID);
                 }
+                LeanTween.delayedCall(1.5f, () => { WinScreen(); });
                 
-                WinScreen();
             }
            
             
@@ -129,6 +136,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void WinScreen()
     {
+        Up();
         StartCoroutine(FadeOutAndIn(audioSourceWin));
         Enemy.ended = true;
         ended = false;
